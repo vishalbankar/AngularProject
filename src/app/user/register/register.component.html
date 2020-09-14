@@ -1,0 +1,37 @@
+<!-- <div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">Registration Page</h1>
+    <p class="lead"> Registration will be done next time.</p>
+  </div>
+</div> -->
+
+<br>
+<h2 class=" text-primary text-center ">Registration Form</h2>
+<div class="jumbotron jumbotron-fluid">
+<div class="container">
+<form #userForm = ngForm (ngSubmit) = "onSubmit" novalidate userModel>
+
+
+    <div class="form-group" >
+      <label>Enter Username</label>
+      <input type="text" class="form-control" id="ufirst" placeholder="Enter Username" autocomplete="off" ngModel name="FirstName">
+    </div>
+    
+    <div class="form-group">
+      <label >Enter UserName</label>
+      <input type="text" class="form-control" ngModel name="UserName" id="uName" placeholder="Enter UserName"autocomplete="off">
+    </div>
+    <div class="form-group">
+      <label >Enter Password</label>
+      <input type="text" class="form-control" id="uPass"ngModel name="UserPassword" placeholder="Enter Password"autocomplete="off">
+    </div>
+    <div class="form-group">
+      <label >Enter Mobile Number</label>
+      <input type="text" class="form-control" id="unumber"ngModel name="UserNumber" placeholder="Enter Mobile Number"autocomplete="off">
+    </div>
+    <button type="submit" class="btn btn-success"  >Register</button>&nbsp;&nbsp;&nbsp;&nbsp;
+    <button type="reset" class="btn btn-danger">Reset</button>
+   
+  </form>
+  </div>
+</div>

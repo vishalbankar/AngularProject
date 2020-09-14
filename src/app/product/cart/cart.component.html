@@ -1,0 +1,13 @@
+
+
+<div class="jumbotron">
+  <h3>My Cart</h3>
+  <table class="table table-stripped">
+    <tr *ngFor="let data of cartProdList">
+      <td> {{ data.ProdId}}</td>
+      <td> <img src="{{ data.ProdImg}}" height="150"></td>
+      <td> <b>ProductName:</b>{{ data.ProdName}}</td>
+      <td> <b>ProductPrice:</b>{{ data.ProdPrice}}</td>
+    </tr>
+  </table>
+</div>
