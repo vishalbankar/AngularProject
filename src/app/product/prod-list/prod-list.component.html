@@ -1,6 +1,5 @@
-<button (click)="loaddata()" *ngIf="!(prodListArr.length > 0)">loadData</button>
 <div class="jumbotron">
-  <div class="row" >
+  <div class="row">
     <div class="col-md-4" *ngFor="let Product of prodListArr">
      <div class="card" ><br>
       <img class="card-img-top" src="{{Product.ProdImg}}" alt="Card image cap" height="250">
@@ -12,9 +11,7 @@
 	<!--<p class="card-text">{{ Product.productDescription }}</p> -->
   </div>
     <div class="card-body">Price: &#8377;&nbsp; {{ Product.ProdPrice }}</div>
-    <!-- <span (click)="addToCart(Product)" class="btn btn-primary"><i class="fas fa-cart-plus"></i></span>
-    <a (click)="addToFavourite(Product)" class="btn btn-primary"><i class="fas fa-heart"></i></a>
-	<a (click)="removeProduct(Product)" class="btn btn-primary"><i class="fas fa-trash"></i></a> -->
+    
    <button class="btn btn-primary" (click)="addToCart(Product.ProdId)">add to cart</button>&nbsp;&nbsp;
        <button class="btn btn-secondary" (click)="buyNow()">Buy now</button>
        <br>

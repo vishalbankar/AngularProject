@@ -16,16 +16,17 @@ export class ProductService {
   private subject = new Subject<any>();
  
   getProdData(){
-   let data = this.httpServer.get('http://localhost:3000/product');
-    data.subscribe(res =>{
-      this.productArr=res;      
-    });
-    return this.productArr;
+   //let data = 
+   return this.httpServer.get<any>('http://localhost:3000/product');
+    // data.subscribe(res =>{
+    //   this.productArr=res;      
+    // });
+    // return this.productArr;
    }
 
    productAddedToCart(id){
     this.cartProdArr.push(id);
-    console.log(this.cartProdArr.length);
+    console.log(this.cartProdArr)
     this.cartProdCount = this.cartProdArr.length;
     //this.cartProdArr.length;
    }

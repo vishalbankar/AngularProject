@@ -11,11 +11,13 @@ export class ProdListComponent implements OnInit {
   public prodListArr:any[] = [];
   public cartProdArr:any = [];
 
-  constructor(private prdService:ProductService) { }
+  constructor(private prdService:ProductService) { 
+     this.loaddata();
+  }
 
   ngOnInit() {
-    this.prdService.getProdData();
-    this.prodListArr=this.prdService.productArr;
+    //this.prdService.getProdData();
+    //this.prodListArr=this.prdService.productArr;
     this.loaddata(); 
   }
 
@@ -23,6 +25,11 @@ export class ProdListComponent implements OnInit {
    // if(this.prdService.productArr.length>0){
    this.prodListArr=this.prdService.productArr;
    //}
+
+   this.prdService.getProdData().subscribe(data => {
+     this.prodListArr = data;
+   })
+
   }
   buyNow() {
     alert("check user is loged in or not")
