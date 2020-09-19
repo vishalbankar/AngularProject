@@ -7,8 +7,12 @@ import { Subscription } from 'rxjs';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
 export class AppComponent {
   public noOfProdAddedToCart:number = 0;
   public title;
-  constructor( public prdSrv:ProductService){ }
+  public onloadDataArry:any[] = [];
+  constructor( public prdSrv:ProductService){
+   this.prdSrv.getProdData().subscribe(data =>{ this.onloadDataArry = data; })
+   }
 }
