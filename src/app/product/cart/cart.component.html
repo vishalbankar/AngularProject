@@ -3,11 +3,35 @@
 <div class="jumbotron">
   <h3>My Cart</h3>
   <table class="table table-stripped">
+
+    <tr>
+      <td><b>Product ID</b></td>
+      <td><b>Product Image</b></td>
+      <td> <b>ProductName:</b></td>
+      <td> <b>ProductPrice:</b></td>
+    </tr>
+
     <tr *ngFor="let data of cartProdList">
       <td> {{ data.ProdId}}</td>
       <td> <img src="{{ data.ProdImg}}" height="150"></td>
-      <td> <b>ProductName:</b>{{ data.ProdName}}</td>
-      <td> <b>ProductPrice:</b>{{ data.ProdPrice}}</td>
+      <td> <b>product Model:</b>{{ data.ProdName}}</td>
+      <td> <b>Price:</b>{{ data.ProdPrice}}</td>
+    </tr>
+
+    <tr >
+      <td colspan="3"></td>
+      <td> Grand Total:{{totalAmount}}</td>
     </tr>
   </table>
 </div>
+
+
+
+
+
+<!-- grand total 
+ 
+  
+
+ 
+-->
